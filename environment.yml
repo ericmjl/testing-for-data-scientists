@@ -1,0 +1,7 @@
+name: testing-for-data-scientists
+channels:
+- conda-forge
+dependencies:
+- python=3.7
+- conda
+- pandoc
