@@ -1,8 +1,10 @@
 # Data Science Testing
 
-> Eric J. Ma
->
-> Ann Arbor, 2020-01-15
+Eric J. Ma
+
+PyData Ann Arbor
+
+2020-01-15
 
 ---
 
@@ -33,6 +35,9 @@ Keep your hands up...
 ----
 
 ## How many of you write tests for your code?
+
+OK, please put your hands down.
+<!-- .element: style="text-align:left" -->
 
 ----
 
@@ -258,7 +263,7 @@ Writing tests helps you catch bugs.
 
 ----
 
-### Our data: a complex, evolving schema
+### Our data: complex, evolving data management requirements
 
 - As platform gets built out, data requirements change.
 <!-- .element: class="fragment" -->
@@ -272,16 +277,11 @@ Lots of joins needed to make get data in human-readable form.
 
 ----
 
-### Things to safeguard against:
 
-- Evolving schema.
-<!-- .element: class="fragment" style="text-align:left" -->
-- Unexpected schema changes.
-<!-- .element: class="fragment" style="text-align:left" -->
+### The schema is the data's API!
 
-### The schema is the data's API!**
-
-Do you want the APIs that you depend on to change underneath you?
+Do you like having the APIs that you depend on to change underneath you?
+<!-- .element: class="fragment" -->
 
 ----
 
@@ -320,7 +320,6 @@ def test_query_function():
 ### I Expect Great Things of You
 
 [Great Expectations](https://greatexpectations.io/) (GE) is right on our list of next things to try.
-<!-- .element: class="fragment" -->
 
 Only dealing with urgent matters have blocked us from using GE.
 <!-- .element: class="fragment" -->
@@ -340,7 +339,7 @@ Because of data caching and data testing...
 
 ---
 
-## Tips for Building a Culture of Testing
+## Building a Regular Practice of Testing in Data Science
 
 ----
 
@@ -379,4 +378,9 @@ Deliver talks about testing.
 
 - [Essays on Data Science](https://ericmjl.github.io/essays-on-data-science/)
 - [Personal Blog](https://ericmjl.github.io/blog/)
--
+<!-- TODO: Double-check this one -->
+- [Data Science Manifesto]
+
+---
+
+## Thank you!
