@@ -386,6 +386,7 @@ Because of data caching and data testing...
 - [Personal Blog](https://ericmjl.github.io/blog/)
 <!-- TODO: Double-check this one -->
 - [Data Science Manifesto]()
+- [Great Expectations](https://greatexpectations.io/)
 - [Hypothesis]()
 - [`pytest`]()
 
