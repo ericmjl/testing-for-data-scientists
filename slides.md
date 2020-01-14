@@ -321,7 +321,7 @@ def test_query_function():
 
 ### I Expect Great Things of You
 
-[Great Expectations](https://greatexpectations.io/)
+[Great Expectations][ge]
 
 ----
 
@@ -386,9 +386,11 @@ Because of data caching and data testing...
 - [Personal Blog](https://ericmjl.github.io/blog/)
 <!-- TODO: Double-check this one -->
 - [Data Science Manifesto]()
-- [Great Expectations](https://greatexpectations.io/)
+- [Great Expectations][ge]
 - [Hypothesis]()
 - [`pytest`]()
+
+[ge]: https://greatexpectations.io/
 
 ---
 
