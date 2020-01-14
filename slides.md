@@ -142,7 +142,7 @@ A: Most of the function calls inside `predict` was well-tested already,
 so we don't need to duplicate those test.
 Rather, we only wanted to make sure that they worked together,
 given certain inputs.
- -->
+-->
 
 ```python
 from utils import predict
@@ -160,24 +160,23 @@ Cool! Are we done?
 
 ### Clearly not!
 
-One **huge** assumption we made here was the length of the input string.
+One **huge** assumption we made here was about the input string.
 
 Let's revisit that test.
 
-----
+<!-- ---- -->
 
-- Featurize intended before predict.
-- Prediction function uses a model that has been trained only on 495-long vectors per sample.
+<!-- - Featurize intended before predict. -->
+<!-- - Prediction function uses a model that has been trained only on 495-long vectors per sample. -->
 <!-- .element: class="fragment" -->
-- Vectors came from 99-letter strings.
+<!-- - Vectors came from 99-letter strings. -->
 <!-- .element: class="fragment" -->
-- Those 99-letter strings need to be drawn from a valid alphabet; not all 26 letters are valid.
+<!-- - Those 99-letter strings need to be drawn from a valid alphabet; not all 26 letters are valid. -->
 <!-- .element: class="fragment" -->
 
 ----
 
 _If a user inputs a string that is not 99 letters long, the program should crash._
-
 
 ----
 
@@ -185,7 +184,7 @@ _If a user inputs a string with invalid characters, the program should crash._
 
 ----
 
-Let's write make the code more robust.
+Let's make the code more robust.
 
 ```python
 acceptable_letters = set('ACDEFGHIJKLMNPQRSTVWXY')
@@ -202,14 +201,19 @@ def featurize(sequence):
 
 ----
 
-We can now make the test also more robust, using `Hypothesis`.
+Let's make the test more robust.
 
 ```python
 from hypothesis import strategies as st, given
 # other imports here...
+acceptable_letters = set('ACDEFGHIJKLMNPQRSTVWXY')
 
 @given(
-    sequence=st.text(alphabet=..., min_size=0, max_size=200))
+    sequence=st.text(
+        alphabet=acceptable_letters,
+        min_size=0,
+        max_size=200)
+    )
 )
 def test_featurize(sequence):
     if len(sequence) != 99:
@@ -220,14 +224,13 @@ def test_featurize(sequence):
         assert feats.shape[0] == 1
         assert feats.shape[1] == len(sequence) * 5
 ```
-<!-- .element: class="fragment" -->
 
-We can do the same for invalid characters.
+Doing the same for invalid characters is an exercise left for the reader (tm).
 <!-- .element: class="fragment" -->
 
 ----
 
-### We are in a much better position now
+### We are in a much better position
 
 - Function is defensively robust against unexpected inputs.
 <!-- .element: class="fragment" -->
@@ -277,11 +280,7 @@ Lots of joins needed to make get data in human-readable form.
 
 ----
 
-
 ### The schema is the data's API!
-
-Do you like having the APIs that you depend on to change underneath you?
-<!-- .element: class="fragment" -->
 
 ----
 
@@ -295,8 +294,7 @@ Do you like having the APIs that you depend on to change underneath you?
 <!-- .element: class="fragment" -->
 - Bounds
 <!-- .element: class="fragment" -->
-
-Are there anything else you can think of?
+- ...more?
 <!-- .element: class="fragment" -->
 
 ----
@@ -319,10 +317,7 @@ def test_query_function():
 
 ### I Expect Great Things of You
 
-[Great Expectations](https://greatexpectations.io/) (GE) is right on our list of next things to try.
-
-Only dealing with urgent matters have blocked us from using GE.
-<!-- .element: class="fragment" -->
+[Great Expectations](https://greatexpectations.io/)
 
 ----
 
@@ -339,26 +334,33 @@ Because of data caching and data testing...
 
 ---
 
-## Building a Regular Practice of Testing in Data Science
+## Build a Regular Practice of Testing in Data Science
 
 ----
 
-### Bake it into your infrastructure
+### Be `#UNBOSSED`
 
-Set up a CI system that mandates checks on code.
+- Make opinionated CI configuration templates.
 <!-- .element: class="fragment" -->
-
-Don't allow code to be committed without review and passing tests.
+- Push DevOps team for guidance.
 <!-- .element: class="fragment" -->
 
 ----
 
-### Find the wins that build credibility
+### Automate testing
 
-Provide testimonials to your DevOps team (where applicable).
+- Set up a CI system that mandates checks on code.
+<!-- .element: class="fragment" -->
+- Don't allow code to be merged without review and passing tests.
 <!-- .element: class="fragment" -->
 
-Deliver talks about testing.
+----
+
+### Build credibility
+
+- Provide testimonials to your DevOps team (where applicable).
+<!-- .element: class="fragment" -->
+- Deliver talks about testing.
 <!-- .element: class="fragment" -->
 
 ---
