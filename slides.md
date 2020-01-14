@@ -2,8 +2,6 @@
 
 > Eric J. Ma
 >
-> Novartis Institutes for Biomedical Research
->
 > Ann Arbor, 2020-01-15
 
 ---
@@ -11,7 +9,14 @@
 ## About Me
 
 - Scientific Data Analysis, NIBR IT
-- https://ericmjl.github.io/
+<!-- .element: class="fragment" -->
+- Health Data Fellow, Insight Data Science
+<!-- .element: class="fragment" -->
+- Biological Engineering, MIT
+<!-- .element: class="fragment" -->
+
+[Personal Website](https://ericmjl.github.io/)
+<!-- .element: class="fragment" -->
 
 ---
 
@@ -41,28 +46,33 @@ Keep your hands up...
 
 ## Today's Main Point
 
-> As a data scientist,
-> investing time in writing tests today
-> will save you time later on,
-> thus increasing your productivity.
+As a data scientist,
+investing time in writing tests today will:
+<!-- .element: style="text-align:left" -->
+
+- save you time later on,
+<!-- .element: class="fragment" -->
+- thus decreasing team frustration,
+<!-- .element: class="fragment" -->
+- and increasing team productivity.
+<!-- .element: class="fragment" -->
 
 The same holds for basic software engineering skills in general:
 documentation, testing, refactoring.
-<!-- .element: class="fragment" -->
+<!-- .element: class="fragment" style="text-align:left" -->
 
 ---
 
 ## Two Stories
 
-1. How automated testing revealed weakspots in an app
+1. How automated testing revealed weakspots
 <!-- .element: class="fragment" -->
 2. How testing accelerated our data analysis workflow
 <!-- .element: class="fragment" -->
 
-
 ---
 
-## How automated testing revealed weakspots in an app
+## How automated testing revealed weakspots
 
 ----
 
@@ -218,15 +228,18 @@ We can do the same for invalid characters.
 <!-- .element: class="fragment" -->
 - Tests help us catch breaking changes.
 <!-- .element: class="fragment" -->
+- If I hand this over for productionization, engineers are going to have an easier time.
+<!-- .element: class="fragment" -->
 
 ----
 
 ### In practice...
 
 We caught this issue by using `Hypothesis`, and worked backwards.
-<!-- .element: class="fragment" -->
 
 Writing tests helps you catch bugs.
+<!-- .element: class="fragment" -->
+
 ---
 
 ## How testing accelerated our data analysis workflow
@@ -249,23 +262,26 @@ Writing tests helps you catch bugs.
 
 - As platform gets built out, data requirements change.
 <!-- .element: class="fragment" -->
-- New enzyme = _similar_ schema.
+- New enzyme = similar schema.
 <!-- .element: class="fragment" -->
 - The database is as far normalized as possible
 <!-- .element: class="fragment" -->
 
-Lots of `join`s needed to make get data in human-readable form.
-<!-- .element: class="fragment" -->
+Lots of joins needed to make get data in human-readable form.
+<!-- .element: class="fragment" style="text-align:left" -->
 
 ----
 
 ### Things to safeguard against:
 
 - Evolving schema.
+<!-- .element: class="fragment" style="text-align:left" -->
 - Unexpected schema changes.
+<!-- .element: class="fragment" style="text-align:left" -->
 
-> For tabular data, the schema is the data's API!
-<!-- .element: class="fragment" -->
+### The schema is the data's API!**
+
+Do you want the APIs that you depend on to change underneath you?
 
 ----
 
@@ -285,7 +301,7 @@ Are there anything else you can think of?
 
 ----
 
-### Testing Data
+### Example of Testing Data
 
 ```python
 def test_query_function():
