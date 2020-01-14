@@ -1,3 +1,7 @@
+---
+title: Data Science Testing
+---
+
 # Data Science Testing
 
 Eric J. Ma
@@ -381,7 +385,9 @@ Because of data caching and data testing...
 - [Essays on Data Science](https://ericmjl.github.io/essays-on-data-science/)
 - [Personal Blog](https://ericmjl.github.io/blog/)
 <!-- TODO: Double-check this one -->
-- [Data Science Manifesto]
+- [Data Science Manifesto]()
+- [Hypothesis]()
+- [`pytest`]()
 
 ---
 
