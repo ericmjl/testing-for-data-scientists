@@ -10,7 +10,7 @@
 
 ## About Me
 
-- Scientific Data Analysis, NIBR IT ("Internal consultant")
+- Scientific Data Analysis, NIBR IT
 - https://ericmjl.github.io/
 
 ---
@@ -151,11 +151,10 @@ Let's revisit that test.
 
 ----
 
-- `featurize(sequence)` intent: use before `predict`.
+- Featurize intended before predict.
+- Prediction function uses a model that has been trained only on 495-long vectors per sample.
 <!-- .element: class="fragment" -->
-- `predict()` uses a model that has been trained only on 495-long vectors per sample.
-<!-- .element: class="fragment" -->
-- Those vectors came from 99-letter strings.
+- Vectors came from 99-letter strings.
 <!-- .element: class="fragment" -->
 - Those 99-letter strings need to be drawn from a valid alphabet; not all 26 letters are valid.
 <!-- .element: class="fragment" -->
@@ -225,9 +224,10 @@ We can do the same for invalid characters.
 ### In practice...
 
 We caught this issue by using `Hypothesis`, and worked backwards.
+<!-- .element: class="fragment" -->
 
+Writing tests helps you catch bugs.
 ---
-
 
 ## How testing accelerated our data analysis workflow
 
@@ -304,19 +304,63 @@ def test_query_function():
 ### I Expect Great Things of You
 
 [Great Expectations](https://greatexpectations.io/) (GE) is right on our list of next things to try.
+<!-- .element: class="fragment" -->
 
 Only dealing with urgent matters have blocked us from using GE.
+<!-- .element: class="fragment" -->
 
 ----
 
 ### Tests have accelerated our workflow
 
-- A non-routine data query that may have taken
+Because of data caching and data testing...
+<!-- .element: class="fragment" -->
+
+...a non-routine data query that may have taken half a day to get right...
+<!-- .element: class="fragment" -->
+
+...instead took 10 minutes to finish and be confident in.
+<!-- .element: class="fragment" -->
+
+---
+
+## Tips for Building a Culture of Testing
+
+----
+
+### Bake it into your infrastructure
+
+Set up a CI system that mandates checks on code.
+<!-- .element: class="fragment" -->
+
+Don't allow code to be committed without review and passing tests.
+<!-- .element: class="fragment" -->
+
+----
+
+### Find the wins that build credibility
+
+Provide testimonials to your DevOps team (where applicable).
+<!-- .element: class="fragment" -->
+
+Deliver talks about testing.
+<!-- .element: class="fragment" -->
 
 ---
 
 ## Conclusions
 
-- If you write software, write tests for your code.
+- If you write code that you need to depend on, write tests for your code.
+<!-- .element: class="fragment" -->
 - If you use data, declare expectations of your data.
+<!-- .element: class="fragment" -->
 - "Escape auto-manual testing with Hypothesis."
+<!-- .element: class="fragment" -->
+
+---
+
+## Resources
+
+- [Essays on Data Science](https://ericmjl.github.io/essays-on-data-science/)
+- [Personal Blog](https://ericmjl.github.io/blog/)
+-
