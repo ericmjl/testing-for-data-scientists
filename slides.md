@@ -14,12 +14,30 @@ PyData Ann Arbor
 
 ## About Me
 
-- Scientific Data Analysis, NIBR IT
-<!-- .element: class="fragment" -->
-- Health Data Fellow, Insight Data Science
-<!-- .element: class="fragment" -->
-- Biological Engineering, MIT
-<!-- .element: class="fragment" -->
+<table>
+    <tr>
+        <td width="33%" style="text-align: center; border-width: 0; vertical-align: bottom">
+            <img src="./assets/images/novartis.gif" alt="">
+        </td>
+        <td width="33%" style="text-align: center; border-width: 0; vertical-align: bottom">
+            <img src="./assets/images/mit.gif" alt="">
+        </td>
+        <td width="33%" style="text-align: center; border-width: 0; vertical-align: bottom">
+            <img src="./assets/images/python.gif" alt="">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p style="text-align: center">Investigator, Scientific Data Analysis</p>
+        </td>
+        <td>
+            <p style="text-align: center">ScD, Biological Engineering, 2017</p>
+        </td>
+        <td>
+            <p style="text-align: center">Bayesian Stats, ML, Network Science</p>
+        </td>
+    </tr>
+</table>
 
 [Personal Website](https://ericmjl.github.io/)
 <!-- .element: class="fragment" -->
@@ -55,7 +73,7 @@ OK, please put your hands down.
 
 ## Today's Main Point
 
-As a data scientist,
+If you build data products as a data sientist,
 investing time in writing tests today will:
 <!-- .element: style="text-align:left" -->
 
@@ -319,12 +337,6 @@ def test_query_function():
 
 ----
 
-### I Expect Great Things of You
-
-[Great Expectations][ge]
-
-----
-
 ### Tests have accelerated our workflow
 
 Because of data caching and data testing...
@@ -384,13 +396,10 @@ Because of data caching and data testing...
 
 - [Essays on Data Science](https://ericmjl.github.io/essays-on-data-science/)
 - [Personal Blog](https://ericmjl.github.io/blog/)
-<!-- TODO: Double-check this one -->
-- [Data Science Manifesto]()
-- [Great Expectations][ge]
-- [Hypothesis]()
-- [`pytest`]()
-
-[ge]: https://greatexpectations.io/
+- [Data Science Manifesto](http://www.datasciencemanifesto.org/)
+- [Great Expectations](https://greatexpectations.io/)
+- [Hypothesis](https://hypothesis.readthedocs.io/)
+- [`pytest`](https://pytest.readthedocs.io/)
 
 ---
 
