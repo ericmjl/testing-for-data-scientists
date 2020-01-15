@@ -29,7 +29,7 @@ script:
     - mkdir -p docs/
     # Use reveal-md to generate static docs.
     - reveal-md slides.md --static docs --disable-auto-open
-    - cp assets docs/.
+    - cp -r assets docs/.
 
 
 # This is an example to deploy to a branch through Travis.
