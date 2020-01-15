@@ -19,9 +19,6 @@ install:
     - conda env create -f environment.yml
     - source activate testing-for-data-scientists
 
-    # Ensure that the kernel is installed into the compute environment.
-    - python -m ipykernel install --user --name testing-for-data-scientists
-
     # Install reveal-md
     - npm install -g reveal-md
 
