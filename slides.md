@@ -14,9 +14,8 @@ PyData Ann Arbor
 
 ## Get the Slides!
 
-
 ![](./assets/talk-url.svg)
-<!-- .element: style="width: 300px" -->
+<!-- .element: style="width: 300px; text-align: center" -->
 
 <small>https://ericmjl.github.io/testing-for-data-scientists/</small>
 
@@ -90,7 +89,7 @@ investing time in writing tests today will:
 - and increasing team productivity.
 <!-- .element: class="fragment" -->
 
-<small>The same holds for basic software engineering skills in general.</small>
+<small style="text-align: center">The same holds for basic software engineering skills in general.</small>
 <!-- .element: class="fragment" style="text-align:left" -->
 
 ---
