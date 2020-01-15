@@ -26,11 +26,10 @@ install:
 script:
     # Create the docs directory. This is where we will be publishing from
     # (see the "deploy" section below).
-    - mkdir -p docs
-    # All notebooks that need to be converted are inside nbconvert_config.py
-    # We have to call on --execute - without doing so, the execution config
-    # inside nbconvert_config.py won't run.
+    - mkdir -p docs/
+    # Use reveal-md to generate static docs.
     - reveal-md slides.md --static docs --disable-auto-open
+    - cp assets docs/.
 
 
 # This is an example to deploy to a branch through Travis.
