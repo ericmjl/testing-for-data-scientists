@@ -28,7 +28,7 @@ script:
     # (see the "deploy" section below).
     - mkdir -p docs/
     # Use reveal-md to generate static docs.
-    - reveal-md slides.md --static docs --disable-auto-open
+    - reveal-md slides.md --static docs --disable-auto-open --theme white
     - cp -r assets docs/.
 
 
