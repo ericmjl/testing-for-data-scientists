@@ -312,6 +312,18 @@ Lots of joins needed to make get data in human-readable form.
 
 ----
 
+### We used to have to update Postgres views...
+
+<a href="https://imgflip.com/i/3m8mhk"><img src="https://i.imgflip.com/3m8mhk.jpg" title="made at imgflip.com"/></a>
+
+----
+
+### ...until we switched to caching our views as dataframes.
+
+<img src="https://i.dailymail.co.uk/i/pix/2015/12/06/18/2F1EBE5300000578-0-image-a-1_1449426930551.jpg" title="Catching a panda">
+
+----
+
 ### The schema is the data's API!
 
 <small>_Actually, data access APIs might sometimes be better..._</small>
@@ -320,6 +332,13 @@ Lots of joins needed to make get data in human-readable form.
 
 ----
 
+### If the schema changes even slightly...
+
+----
+
+### ...we want to know ASAP.
+
+----
 ### Tests for Data
 
 - Column names
@@ -380,12 +399,14 @@ Because of data caching and data testing...
 
 ----
 
-### <span style="color:green">`#AUTOMATE`</span> testing
+### <span style="color:green">`#AUTOMATE`</span> everything
 
 - Set up a CI system that mandates checks on code.
 <!-- .element: class="fragment" -->
-- Don't allow code to be merged without review and passing tests.
+- Don't allow code to be merged without review passing tests.
 <!-- .element: class="fragment" -->
+
+<small>Nobody argues against convenience!</small>
 
 ----
 
@@ -393,7 +414,7 @@ Because of data caching and data testing...
 
 - Provide testimonials to your DevOps team (where applicable).
 <!-- .element: class="fragment" -->
-- Deliver talks about testing.
+- Deliver talks about testing!
 <!-- .element: class="fragment" -->
 
 ---
