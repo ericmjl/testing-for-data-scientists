@@ -1,6 +1,19 @@
----
-title: Data Science Testing
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Data Science Testing</title>
+    <link rel="stylesheet" href="./css/reveal.css" />
+    <link rel="stylesheet" href="./css/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">
 
 # Data Science Testing
 
@@ -9,9 +22,7 @@ Eric J. Ma
 PyData Ann Arbor
 
 2020-01-15
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ## About Me
 
 - Scientific Data Analysis, NIBR IT
@@ -23,36 +34,24 @@ PyData Ann Arbor
 
 [Personal Website](https://ericmjl.github.io/)
 <!-- .element: class="fragment" -->
-
----
-
+</script></section><section ><section data-markdown><script type="text/template">
 ## How many of you are data scientists?
 
 Keep your hands up...
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ## How many of you write code in a programming language >50% of your time?
 
 Keep your hands up...
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ## How many of you write tests for your code?
 
 OK, please put your hands down.
 <!-- .element: style="text-align:left" -->
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ## For those who don't write tests, what are your reasons?
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ## For those who do write tests, what are your reasons?
-
----
-
+</script></section></section><section  data-markdown><script type="text/template">
 ## Today's Main Point
 
 As a data scientist,
@@ -69,31 +68,23 @@ investing time in writing tests today will:
 The same holds for basic software engineering skills in general:
 documentation, testing, refactoring.
 <!-- .element: class="fragment" style="text-align:left" -->
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ## Two Stories
 
 1. How automated testing revealed weakspots
 <!-- .element: class="fragment" -->
 2. How testing accelerated our data analysis workflow
 <!-- .element: class="fragment" -->
-
----
-
+</script></section><section ><section data-markdown><script type="text/template">
 ## How automated testing revealed weakspots
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### HIV Drug Resistance Prediction
 
 - Input: an amino acid sequence (string)
 <!-- .element: class="fragment" -->
 - Output: drug resistance (a number)
 <!-- .element: class="fragment" -->
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Model Training Functions
 
 ```python
@@ -117,9 +108,7 @@ def predict(features):
 What have we assumed here
 that probably ought to be tested?
 <!-- .element: class="fragment" -->
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Let's write a test for featurize!
 
 ```python
@@ -132,9 +121,7 @@ def test_featurize():
     assert feats.shape[0] == 1
     assert feats.shape[1] == len(sequence) * 5
 ```
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Let's write a test for predict!
 
 <!-- Q&A
@@ -159,9 +146,7 @@ def test_predict():
 ```
 
 Cool! Are we done?
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Clearly not!
 
 One **huge** assumption we made here was about the input string.
@@ -177,17 +162,11 @@ Let's revisit that test.
 <!-- .element: class="fragment" -->
 <!-- - Those 99-letter strings need to be drawn from a valid alphabet; not all 26 letters are valid. -->
 <!-- .element: class="fragment" -->
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 _If a user inputs a string that is not 99 letters long, the program should crash._
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 _If a user inputs a string with invalid characters, the program should crash._
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 Let's make the code more robust.
 
 ```python
@@ -202,9 +181,7 @@ def featurize(sequence):
 
 ```
 <!-- .element: class="fragment" -->
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 Let's make the test more robust.
 
 ```python
@@ -231,9 +208,7 @@ def test_featurize(sequence):
 
 Doing the same for invalid characters is an exercise left for the reader (tm).
 <!-- .element: class="fragment" -->
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### We are in a much better position
 
 - Function is defensively robust against unexpected inputs.
@@ -242,22 +217,16 @@ Doing the same for invalid characters is an exercise left for the reader (tm).
 <!-- .element: class="fragment" -->
 - If I hand this over for productionization, engineers are going to have an easier time.
 <!-- .element: class="fragment" -->
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### In practice...
 
 We caught this issue by using `Hypothesis`, and worked backwards.
 
 Writing tests helps you catch bugs.
 <!-- .element: class="fragment" -->
-
----
-
+</script></section></section><section ><section data-markdown><script type="text/template">
 ## How testing accelerated our data analysis workflow
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Protein engineering platform
 
 - Large but simple codebase.
@@ -267,9 +236,7 @@ Writing tests helps you catch bugs.
 
 **Focus on data access.**
 <!-- .element: class="fragment" -->
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Our data: complex, evolving data management requirements
 
 - As platform gets built out, data requirements change.
@@ -281,13 +248,9 @@ Writing tests helps you catch bugs.
 
 Lots of joins needed to make get data in human-readable form.
 <!-- .element: class="fragment" style="text-align:left" -->
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### The schema is the data's API!
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Tests for Data
 
 - Column names
@@ -300,9 +263,7 @@ Lots of joins needed to make get data in human-readable form.
 <!-- .element: class="fragment" -->
 - ...more?
 <!-- .element: class="fragment" -->
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Example of Testing Data
 
 ```python
@@ -316,15 +277,11 @@ def test_query_function():
     # Null checks: this column __must__ be fully populated
     assert pd.isnull(df[column_name]).sum() == 0
 ```
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### I Expect Great Things of You
 
 [Great Expectations][ge]
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Tests have accelerated our workflow
 
 Because of data caching and data testing...
@@ -335,40 +292,30 @@ Because of data caching and data testing...
 
 ...instead took 10 minutes to finish and be confident in.
 <!-- .element: class="fragment" -->
-
----
-
+</script></section></section><section ><section data-markdown><script type="text/template">
 ## Build a Regular Practice of Testing in Data Science
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Be `#UNBOSSED`
 
 - Make opinionated CI configuration templates.
 <!-- .element: class="fragment" -->
 - Push DevOps team for guidance.
 <!-- .element: class="fragment" -->
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Automate testing
 
 - Set up a CI system that mandates checks on code.
 <!-- .element: class="fragment" -->
 - Don't allow code to be merged without review and passing tests.
 <!-- .element: class="fragment" -->
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Build credibility
 
 - Provide testimonials to your DevOps team (where applicable).
 <!-- .element: class="fragment" -->
 - Deliver talks about testing.
 <!-- .element: class="fragment" -->
-
----
-
+</script></section></section><section  data-markdown><script type="text/template">
 ## Conclusions
 
 - If you write code that you need to depend on, write tests for your code.
@@ -377,9 +324,7 @@ Because of data caching and data testing...
 <!-- .element: class="fragment" -->
 - "Escape auto-manual testing with Hypothesis."
 <!-- .element: class="fragment" -->
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ## Resources
 
 - [Essays on Data Science](https://ericmjl.github.io/essays-on-data-science/)
@@ -391,7 +336,56 @@ Because of data caching and data testing...
 - [`pytest`]()
 
 [ge]: https://greatexpectations.io/
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ## Have fun testing!
+</script></section></div>
+    </div>
+
+    <script src="./js/reveal.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './plugin/zoom-js/zoom.js', async: true },
+        { src: './plugin/notes/notes.js', async: true },
+        { src: './plugin/math/math.js', async: true }
+      ];
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+
+      var options = extend(defaultOptions, {}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

@@ -1,8 +1,0 @@
-name: testing-for-data-scientists
-channels:
-- conda-forge
-dependencies:
-- python=3.7
-- conda=4.8.1
-- pandoc=2.9.1.1
-- nodejs=13.6.0
