@@ -277,7 +277,7 @@ def test_featurize(sequence):
 
 We caught this issue by using `Hypothesis`, and worked backwards.
 
-Writing tests helps you catch bugs.
+_Writing tests helps you catch bugs._
 <!-- .element: class="fragment" -->
 
 ---
