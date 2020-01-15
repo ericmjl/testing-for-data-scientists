@@ -90,7 +90,7 @@ investing time in writing tests today will:
 <!-- .element: class="fragment" -->
 
 <small style="text-align: center">The same holds for basic software engineering skills in general.</small>
-<!-- .element: class="fragment" style="text-align:left" -->
+<!-- .element: class="fragment" -->
 
 ---
 
@@ -109,9 +109,15 @@ investing time in writing tests today will:
 
 ### HIV Drug Resistance Prediction
 
-- Input: an amino acid sequence (string)
+<div>
+`MAKVLENPALEO` $\rightarrow$ 1.34
+</div>
 <!-- .element: class="fragment" -->
-- Output: drug resistance (a number)
+<div>
+`MADVLENPALEO` $\rightarrow$ 150
+
+`MADVLENPALRO` $\rightarrow$ 39.3
+</div>
 <!-- .element: class="fragment" -->
 
 ----
