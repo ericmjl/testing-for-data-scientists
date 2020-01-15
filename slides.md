@@ -421,13 +421,10 @@ Because of data caching and data testing...
 
 ## Conclusions
 
-- If you write code that you need to depend on, write tests for your code.
-<!-- .element: class="fragment" -->
-- If you use data, declare expectations of your data.
-<!-- .element: class="fragment" -->
-- "Escape auto-manual testing with Hypothesis."
-<!-- .element: class="fragment" -->
+- If you depend on <span style="color: red">code</span>, write tests for it.
+- If you depend on <span style="color: red">data</span>, write tests for it.
 
+If you depend on it, write a test for it.
 ---
 
 ## Resources
