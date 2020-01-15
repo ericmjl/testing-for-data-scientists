@@ -4,11 +4,21 @@ title: Data Science Testing
 
 # Data Science Testing
 
-Eric J. Ma
+[Eric J. Ma](https://ericmjl.github.io/)
 
 PyData Ann Arbor
 
 2020-01-15
+
+---
+
+## Get the Slides!
+
+
+![](./assets/talk-url.svg)
+<!-- .element: style="width: 300px" -->
+
+<small>https://ericmjl.github.io/testing-for-data-scientists/</small>
 
 ---
 
@@ -39,9 +49,6 @@ PyData Ann Arbor
     </tr>
 </table>
 
-[Personal Website](https://ericmjl.github.io/)
-<!-- .element: class="fragment" -->
-
 ---
 
 ## How many of you are data scientists?
@@ -59,7 +66,6 @@ Keep your hands up...
 ## How many of you write tests for your code?
 
 OK, please put your hands down.
-<!-- .element: style="text-align:left" -->
 
 ----
 
@@ -73,7 +79,7 @@ OK, please put your hands down.
 
 ## Today's Main Point
 
-If you build data products as a data sientist,
+If you build data products as a data scientist,
 investing time in writing tests today will:
 <!-- .element: style="text-align:left" -->
 
@@ -84,8 +90,7 @@ investing time in writing tests today will:
 - and increasing team productivity.
 <!-- .element: class="fragment" -->
 
-The same holds for basic software engineering skills in general:
-documentation, testing, refactoring.
+<small>The same holds for basic software engineering skills in general.</small>
 <!-- .element: class="fragment" style="text-align:left" -->
 
 ---
@@ -128,7 +133,7 @@ def featurize(sequence):
 
 # Return model predictions.
 def predict(features):
-    model = ... # load model
+    model = ... # load scikit-learn model
     return model.predict(features)
 ```
 
@@ -304,6 +309,10 @@ Lots of joins needed to make get data in human-readable form.
 
 ### The schema is the data's API!
 
+<small>_Actually, data access APIs might sometimes be better..._</small>
+
+<small class="fragment">_...but that's another story_</small>
+
 ----
 
 ### Tests for Data
@@ -337,7 +346,7 @@ def test_query_function():
 
 ----
 
-### Tests have accelerated our workflow
+### Test-accelerated workflow
 
 Because of data caching and data testing...
 <!-- .element: class="fragment" -->
@@ -345,16 +354,19 @@ Because of data caching and data testing...
 ...a non-routine data query that may have taken half a day to get right...
 <!-- .element: class="fragment" -->
 
+<div class="fragment" >
 ...instead took 10 minutes to finish and be confident in.
-<!-- .element: class="fragment" -->
+
+<small style="color: gray">(repeat this N times for new analyses)</small>
+</div>
 
 ---
 
-## Build a Regular Practice of Testing in Data Science
+## How to build a regular practice of testing in data science
 
 ----
 
-### Be `#UNBOSSED`
+### Be <span style="color:green">`#UNBOSSED`</span>
 
 - Make opinionated CI configuration templates.
 <!-- .element: class="fragment" -->
@@ -363,7 +375,7 @@ Because of data caching and data testing...
 
 ----
 
-### Automate testing
+### <span style="color:green">`#AUTOMATE`</span> testing
 
 - Set up a CI system that mandates checks on code.
 <!-- .element: class="fragment" -->
@@ -372,7 +384,7 @@ Because of data caching and data testing...
 
 ----
 
-### Build credibility
+### Build <span style="color:green">`#CREDIBILITY`</span>
 
 - Provide testimonials to your DevOps team (where applicable).
 <!-- .element: class="fragment" -->
