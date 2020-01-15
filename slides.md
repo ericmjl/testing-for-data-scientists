@@ -65,6 +65,7 @@ Keep your hands up...
 ## How many of you write tests for your code?
 
 OK, please put your hands down.
+<!-- .element: class="fragment" -->
 
 ----
 
