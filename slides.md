@@ -52,19 +52,19 @@ PyData Ann Arbor
 
 ## How many of you are data scientists?
 
-Keep your hands up...
+<small>Keep your hands up...</small>
 
 ----
 
 ## How many of you write code in a programming language >50% of your time?
 
-Keep your hands up...
+<small>Keep your hands up...</small>
 
 ----
 
 ## How many of you write tests for your code?
 
-OK, please put your hands down.
+<small>OK, please put your hands down.</small>
 <!-- .element: class="fragment" -->
 
 ----
