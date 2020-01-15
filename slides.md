@@ -257,18 +257,18 @@ def test_featurize(sequence):
         assert feats.shape[1] == len(sequence) * 5
 ```
 
-Doing the same for invalid characters is an exercise left for the reader (tm).
+<small>_Doing the same for invalid characters is an exercise left for the reader (tm)._</small>
 <!-- .element: class="fragment" -->
 
 ----
 
 ### We are in a much better position
 
-- Function is defensively robust against unexpected inputs.
+- Function defends against unexpected inputs.
 <!-- .element: class="fragment" -->
 - Tests help us catch breaking changes.
 <!-- .element: class="fragment" -->
-- If I hand this over for productionization, engineers are going to have an easier time.
+- Your engineers are going to thank you.
 <!-- .element: class="fragment" -->
 
 ----
