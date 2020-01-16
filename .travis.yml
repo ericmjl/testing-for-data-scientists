@@ -28,8 +28,10 @@ script:
     # (see the "deploy" section below).
     - mkdir -p docs/
     # Use reveal-md to generate static docs.
-    - reveal-md slides.md --static docs --disable-auto-open --theme white --print slides.pdf
+    - reveal-md slides.md --static docs --disable-auto-open --theme white
     - cp -r assets docs/.
+    # Use reveal-md to generate PDF.
+    - reveal-md slides.md --disable-auto-open --theme white --print slides.pdf
     - cp slides.pdf docs/.
 
 
