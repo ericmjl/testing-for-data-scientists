@@ -28,8 +28,9 @@ script:
     # (see the "deploy" section below).
     - mkdir -p docs/
     # Use reveal-md to generate static docs.
-    - reveal-md slides.md --static docs --disable-auto-open --theme white
+    - reveal-md slides.md --static docs --disable-auto-open --theme white --print slides.pdf
     - cp -r assets docs/.
+    - cp slides.pdf docs/.
 
 
 # This is an example to deploy to a branch through Travis.

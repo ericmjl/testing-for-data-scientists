@@ -440,3 +440,7 @@ If you depend on it, write a test for it.
 ---
 
 ## Have fun testing!
+
+---
+
+## Grab the PDF [here](./slides.pdf)
